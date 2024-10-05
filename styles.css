@@ -1,0 +1,124 @@
+/* General styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Container styles */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 50px 0;
+    border-bottom: 2px solid #16213e;
+    background: linear-gradient(135deg, #0f3460, #16213e);
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #e94560;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 18px;
+    color: #a9a9a9;
+}
+
+/* Section styles */
+.card {
+    background-color: #16213e;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #0f3460;
+}
+
+.card:hover {
+    background-color: #0f3460;
+    color: #fff;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 28px;
+    color: #e94560;
+    margin-bottom: 15px;
+}
+
+.card .details {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+.card:hover .details {
+    display: block;
+}
+
+.card .details li {
+    margin: 10px 0;
+    color: #e0e0e0;
+}
+
+.card .details li a {
+    color: #e94560;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card .details li a:hover {
+    color: #ff6b6b;
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #a9a9a9;
+    border-top: 2px solid #16213e;
+    background-color: #0f3460;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+    }
+}
+
+/* ... existing loader styles ... */

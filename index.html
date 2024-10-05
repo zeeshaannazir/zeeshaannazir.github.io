@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeeshan Nazir's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <p id="loading-number">1</p>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <h1>ZEESHAN NAZIR</h1>
+            <p>Mechanical Engineering Student</p>
+        </header>
+        
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Zeeshan Nazir, a mechanical engineering student at the National Institute of Technology Srinagar. I am passionate about engineering and technology, and I'm looking for internship opportunities to apply my skills and learn more.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="card">
+            <h2>Projects</h2>
+            <ul class="details">
+                <li><a href="link_to_project_1">Project 1</a></li>
+                <li><a href="link_to_project_2">Project 2</a></li>
+                <li><a href="link_to_project_3">Project 3</a></li>
+            </ul>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="card">
+            <h2>Certifications</h2>
+            <ul class="details">
+                <li>Certification 1</li>
+                <li>Certification 2</li>
+                <li>Certification 3</li>
+            </ul>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="card">
+            <h2>Skills</h2>
+            <ul class="details">
+                <li>CAD Design</li>
+                <li>3D Modeling</li>
+                <li>Finite Element Analysis</li>
+                <li>Matlab</li>
+                <li>Python</li>
+            </ul>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="card">
+            <h2>Interests</h2>
+            <ul class="details">
+                <li>Robotics</li>
+                <li>AI and Machine Learning</li>
+                <li>3D Printing</li>
+                <li>Reading about new technologies</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Zeeshan Nazir</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let loader = document.getElementById('loader');
+            let loadingNumber = document.getElementById('loading-number');
+            let count = 1;
+
+            let interval = setInterval(function() {
+                if (count <= 100) {
+                    loadingNumber.textContent = count;
+                    loadingNumber.style.fontSize = (30 + count * 1.5) + 'px';
+                    count++;
+                } else {
+                    clearInterval(interval);
+                    loader.style.display = 'none';
+                }
+            }, 30);
+        });
+    </script>
+</body>
+</html>
