@@ -1,139 +1,275 @@
-
-/* General styles */
-body {
-    font-family: 'Montserrat', sans-serif;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #000000;
-    color: #ffffff;
-}
-h1, h2 {
-    font-family: 'Raleway', sans-serif;
-}
-
-/* Loader styles */
-#loader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.loader-content {
-    text-align: center;
-    font-size: 24px;
-    color: #333;
-}
-
-#loading-number {
-    font-weight: bold;
-    font-size: 30px;
-    font-family: 'Raleway', sans-serif;
-}
-
-/* Container styles */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
     box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 100;
 }
 
-/* Header styles */
-header {
-    text-align: center;
-    padding: 50px 0;
-    border-bottom: 2px solid #ddd;
-}
-
-header h1 {
-    font-size: 48px;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    color: #f39c12;
-}
-
-header p {
+body {
+    background-color: black;
+    color: #f4f4f4;
     font-size: 18px;
-    color: #666;
+    background-image: url('https://your-image-url-here.com/physics-equations.png');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* Section styles */
-.card {
-    background-color: #fff;
+header {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 100vh;
+    position: relative;
+}
+
+.intro {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 30%;
+}
+
+.intro h1 {
+    font-size: 36px;
+    font-weight: 100;
+    color: rgb(255, 179, 0);
+}
+
+.intro p {
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+}
+
+.skills {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 30%;
+}
+
+.skills h2 {
+    font-size: 28px;
+    font-weight: 100;
+    color: rgb(255, 179, 0);
+}
+
+.skills ul {
+    list-style-type: none;
+}
+
+.skills li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.name {
+    position: absolute;
+    font-family: sixtyfour-convergence;
+    text-decoration:overline;
+    bottom: 20px;
+    width: 100%;
+    text-align: left;
+    font-size: 250px;
+    font-weight: 100;
+    color: rgb(255, 179, 0);
+}
+
+#more-info {
+    padding: 50px;
     text-align: center;
-    cursor: pointer;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #222;
+    color: white;
+    border: 1px solid #555;
+    padding: 30px;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s;
 }
 
 .card:hover {
-    background-color: #f39c12;
-    color: #fff;
-    transform: translateY(-5px);
+    transform: scale(1.5);
+}
+.card li {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.card li a {
+    padding: 10px;
+    color: rgb(255, 179, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
-.card h2 {
-    font-size: 28px;
-    color: #f39c12;
+.card p {
+    font-size: 16px;
+    
     margin-bottom: 10px;
 }
 
-.card .details {
-    display: none;
-    list-style-type: none;
-    padding: 0;
+/* Footer Section */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 15px;
 }
 
-.card:hover .details {
-    display: block;
+footer p {
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
-.card .details li {
-    margin: 8px 0;
-    color: #333;
-}
-
-.card .details li a {
-    color: #333;
+.socials a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
     text-decoration: none;
 }
 
-.card .details li a:hover {
-    text-decoration: underline;
+.socials a:hover {
+    color: white;
+}
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Full black background */
+    z-index: 9999; /* Ensure it appears on top of all content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    color: #666;
-    border-top: 2px solid #ddd;
+#loading-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px; 
+    /* Loading bar height */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for loading bar container */
 }
 
-/* Responsive styles */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 36px;
+#loading-bar {
+    width: 0;
+    height: 100%;
+    color: rgb(255, 179, 000);
+    background-color: white; /* Loading bar color */
+    transition: width 0.1s; /* Smooth loading effect */
+}
+
+#loading-percentage {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Charka Petch', sans-serif;
+    font-weight: 100;
+    font-size: 200px;
+    color: rgb(255, 179, 000);
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For screens smaller than 768px (Tablets and phones) */
+@media only screen and (max-width: 768px) {
+    body {
+        background-size: contain;
     }
 
-    header p {
-        font-size: 16px;
+    .intro, .skills {
+        position: static;
+        width: 100%;
+        max-width: none;
+        text-align: left;
+    }
+
+    .intro {
+        margin-bottom: 20px;
+        padding-left: 0px;
+        margin-top: 10px;
+        margin-left: 0px;
+        text-align: left;
+    }
+
+    .skills {
+        margin-top: 10px;
+        margin-left: 10px;
+        padding-right: 0px;
+        padding-left: 140px;
+    }
+
+    .name {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    /* Cards layout becomes vertical */
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
     }
 
     .card {
-        padding: 15px;
+        width: 100%;
+        height: 124%;
+        margin-bottom: 20px;
+    }
+    #loading-percentage {
+        font-size: 130px; /* Adjust font size for tablets */
+    }
+}
+
+/* For screens smaller than 480px (Small phones) */
+@media only screen and (max-width: 480px) {
+    .intro h1, .skills h2 {
+        font-size: 20px;
     }
 
-    .card h2 {
-        font-size: 24px;
+    .intro p, .skills li {
+        font-size: 10px;
+        
+    }
+
+    .name {
+        font-size: 90px;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .card {
+        padding: 30px;
+        width: 124%;
+        height: 124%;
+    }
+    #loading-percentage {
+        font-size: 120px; /* Adjust font size for tablets */
     }
 }
